@@ -14,6 +14,7 @@ Outline for challenge paper on software citation for *ACM Journal of Data and In
   - Two main challenges: 
     * Standardize software citation format for scientific publications
     * Establish mechanism for software to cite other software
+    * Develop infrastructure to support indexing of software citations akin to publication citation ecosystem
   - Metadata needed for software to be cited: software name, DOI, authors/contributors (with names & ORCIDs), software dependencies (ideally in form of DOIs), and any other people/artifacts that would be cited or acknowledged in a paper. This information should be provided in CITATION file, potentially in JSON or XML formats (rather than plaintext) to allow automatic processing/parsing.
   - Although citation format may vary based on the particular style of journals, conferences, or professional societies, at minimum citation of software in publications should include: software name, primary authors/contributors, DOI or other unique identifier, and location where software can be found (DOI or URL).
   - Additional research/efforts needed:

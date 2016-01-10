@@ -20,4 +20,4 @@ Outline for challenge paper on software citation for *ACM Journal of Data and In
     - Additional research/efforts needed:
         * How to cite closed-source/commercial software? Can the above information be provided?
         * Indexing of software citations to create citation network akin to that of publications (e.g., Web of Science, Scopus, Google Scholar).
-        * How to indicate direct use of software for research in citations, where results would not be possible without efforts of software authors? Should this citation be "weighed" higher than others?
+        * How to indicate direct use of software for research in citations, where results would not be possible without efforts of software authors? Should this citation be "weighed" higher than others? AAS suggests new "Software" section below acknowledgements: http://journals.aas.org/policy/software.html

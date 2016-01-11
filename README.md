@@ -13,6 +13,7 @@ Outline:
     - transitive credit via JSON-LD: 
     - Register DOI for software through Zenodo or fig**share**; the former has streamlined process for registering DOI for GitHub software releases.
     - similar efforts to standarize research data citation by DataCite and FORCE11 Data Citation Synthesis Group [*Joint Declaration of Data Citation Principles*](https://www.force11.org/datacitation)
+    - Project CREDiT?
 3. Our recommendations and remaining esearch challenges
     - Two (three? four?) main challenges: 
         * Standardize software citation format for scientific publications

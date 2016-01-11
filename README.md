@@ -14,10 +14,11 @@ Outline:
     - Register DOI for software through Zenodo or fig**share**; the former has streamlined process for registering DOI for GitHub software releases.
     - similar efforts to standarize research data citation by DataCite and FORCE11 Data Citation Synthesis Group [*Joint Declaration of Data Citation Principles*](https://www.force11.org/datacitation)
 3. Our recommendations and remaining esearch challenges
-    - Two main challenges: 
+    - Two (three? four?) main challenges: 
         * Standardize software citation format for scientific publications
         * Establish mechanism for software to cite other software
         * Develop infrastructure to support indexing of software citations akin to publication citation ecosystem
+        * (Dan) depending on what we decide on the overall theme, I think we need to mention peer review as a challenge 
     - Metadata needed for software to be cited: software name, DOI, authors/contributors (with names & ORCIDs), software dependencies (ideally in form of DOIs), and any other people/artifacts that would be cited or acknowledged in a paper. This information should be provided in CITATION file, potentially in JSON or XML formats (rather than plaintext) to allow automatic processing/parsing.
     - Although citation format may vary based on the particular style of journals, conferences, or professional societies, at minimum citation of software in publications should include: software name, primary authors/contributors, DOI or other unique identifier, and location where software can be found (DOI or URL).
     - Additional research/efforts needed:

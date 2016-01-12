@@ -13,6 +13,15 @@
 
 \documentclass[prodmode,acmjdiq]{acmsmall} % Aptara syntax
 
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[american]{babel}
+\usepackage{textcomp}
+\usepackage{csquotes}
+
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{url}
+
 % Package to generate and customize Algorithm as per ACM style
 \usepackage[ruled]{algorithm2e}
 \renewcommand{\algorithmcfname}{ALGORITHM}
@@ -120,9 +129,8 @@ DANIEL S. KATZ
 % The remaining information (journal title, volume, article number, date, etc.) is 'auto-generated'.
 
 \begin{bottomstuff}
-This work is supported by the National Science Foundation, under ...
-
 Some work by D.\ S.\ Katz was supported by the National Science Foundation (NSF) while working at the Foundation; any opinion, finding, and conclusions or recommendations expressed in this material are those of the author and do not necessarily reflect the views of the NSF.
+Some work by K.\ E.\ Niemeyer was supported by the NSF under grant ACI-1535065.
 
 Author's addresses: K.\ E.\ Niemeyer, School of Mechanical, Industrial, and Manufacturing Engineering, Oregon State University; 
 A.\ M.\ Smith,
@@ -133,35 +141,48 @@ Computation Institute, University of Chicago \& Argonne National Laboratory.
 
 \maketitle
 
-
+%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Introduction}
+%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Software is important in science.
+Modern science and engineering depend on software. 
+However, while traditional research results published in archival journals and conferences can be cited to value the efforts of researchers, no such accepted standard exists to credit the considerable efforts that go into software.
+
+Furthermore, since research results now depend on the specific software used (e.g., version), proper citation---and the associated archiving---is necessary to ensure reproducibility.
 
 But academic credit and reputation are generally based on publications.
 
 To increase the amount of software developed and shared, we can consider how we might
-treat software as if it was a publication.
+treat software as a publication.
 
-This means we need a way to uniquely identify released (published) software so that it can be cited by others who use it, and we need a process for peer review for software. Here, we focus on the former.
+This means we need a way to uniquely identify released (published) software so that it can be cited by others who use it, and we need a process for peer review for software.
+Here, we focus on the former.
 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Related Work}
+%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Ongoing efforts by the WSSSPE Software Credit Working Group and FORCE11 Software Citation Working Group
+Ongoing efforts by the WSSSPE Software Credit Working Group~\cite{WSSSPE1,WSSSPE2,WSSSPE3} and FORCE11 Software Citation Working Group
 
-Codemeta for minimal metadata schemes in JSON and XML
+CodeMeta~\cite{CodeMeta} for minimal metadata schemes in JSON and XML
 
 transitive credit for via JSON-LD~\cite{Katz:2015aa}
 
-Project CREDiT
+Project CRediT~\cite{project_credit}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Challenges and Research Directions}
+%%%%%%%%%%%%%%%%%%%%%%%%%
 
-key challenges include
+Key challenges include
 \begin{itemize}
-\item standardize proper format for citing software in publications, and
+\item standardize proper format for citing software in publications,
 \item identify necessary metadata associated with software for citation, 
-\item develop infrastructure to support indexing of software citations along with (or complementary to) the existing publication citation ecosystem.
+\item establish mechanism for software to cite other software (i.e., dependencies),
+\item develop infrastructure to support indexing of software citations along with (or complementary to) the existing publication citation ecosystem, and
+\item determine role of peer review for software.
 \end{itemize}
 
 % Acknowledgments

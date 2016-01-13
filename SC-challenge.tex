@@ -146,44 +146,61 @@ Computation Institute, University of Chicago \& Argonne National Laboratory.
 %%%%%%%%%%%%%%%%%%%%%%%%%
 
 Modern science and engineering depend on software. 
-However, while traditional research results published in archival journals and conferences can be cited to value the efforts of researchers, no such accepted standard exists to credit the considerable efforts that go into software.
-
-Furthermore, since research results now depend on the specific software used (e.g., version), proper citation---and the associated archiving---is necessary to ensure reproducibility.
-
-But academic credit and reputation are generally based on publications.
-
+Traditional research results published in archival journals and conferences can be cited to value the efforts of researchers, but no such accepted standard exists to credit the considerable efforts that go into software.
 To increase the amount of software developed and shared, we can consider how we might
 treat software as a publication.
-
 This means we need a way to uniquely identify released (published) software so that it can be cited by others who use it, and we need a process for peer review for software.
 Here, we focus on the former.
+Furthermore, since research results now depend on the specific software used (e.g., version), proper citation---and the associated preservation---is necessary to ensure reproducibility.
 
+The citation challenge: different communities currently follow widely varying practices for citing software, with guidelines ranging from suggesting citations of associated software or the software directly via DOI~\cite{AAS:2016} to no policy at all, with many ad hoc practices in between~\cite{Howison2015}.
+Adding to this challenge, some research communities have not yet adopted open-source mentalities regarding research software.
+Questions also remain about the role of curating\slash reviewing software---if software will be cited in the same manner as a publication, should it go through peer code review?
+If so, how?
 
+As a first step towards sustainable, reusable, and attributable software, efforts are underway to establish citation practices for software used in research.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Related Work}
 %%%%%%%%%%%%%%%%%%%%%%%%%
 
-Ongoing efforts by the WSSSPE Software Credit Working Group~\cite{WSSSPE1,WSSSPE2,WSSSPE3} and FORCE11 Software Citation Working Group
+Multiple groups, including the WSSSPE Software Credit~\cite{WSSSPE1,WSSSPE2,WSSSPE3} and FORCE11 Software Citation Working Groups, are working to standardize citation practices; some of the observations and recommendations made here come from these groups.
+Our efforts follow similar work by DataCite and the FORCE11 Data Citation Synthesis Group~\cite{DataCitation2014} to standardize research data citation practices.
+Currently, services including Zenodo or fig\textbf{share} allow software developers to register DOIs for software; the former has a streamlined process to register DOIs for GitHub software releases.
+The project CodeMeta~\cite{CodeMeta} is formalizing minimal metadata schemes in JSON and XML to connect existing software repositories, archives, and libraries (e.g., GitHub, fig\textbf{share}, Zenodo).
 
-CodeMeta~\cite{CodeMeta} for minimal metadata schemes in JSON and XML
-
-transitive credit for via JSON-LD~\cite{Katz:2015aa}
-
-Project CRediT~\cite{project_credit}
+Complementary efforts to provide credit for software development in research also depend on standardized citation practices.
+These include the transitive credit via JSON-LD scheme~\cite{Katz:2015aa} that assigns varying credit weights to contriponents---both contributors and research artifacts, including software and data---depending on level of importance to the work.
+The CRediT (contributor role taxonomy) scheme~\cite{project_credit} includes a ``software'' category for authors of a publication with roles dedicated to software development, maintenance, and\slash or testing.
+The related PaperBadger project~\cite{PaperBadger} offers digital contributor badges associated with each role, connecting publications with people via DOI and ORCID, respectively.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Challenges and Research Directions}
 %%%%%%%%%%%%%%%%%%%%%%%%%
 
-Key challenges include
+We identify key challenges as the need to:
 \begin{itemize}
 \item standardize proper format for citing software in publications,
 \item identify necessary metadata associated with software for citation, 
 \item establish mechanism for software to cite other software (i.e., dependencies),
 \item develop infrastructure to support indexing of software citations along with (or complementary to) the existing publication citation ecosystem, and
-\item determine role of peer review for software.
+\item determine the role of peer review for software.
 \end{itemize}
+Although citation format may vary based on the particular style of journals, conferences, or professional societies, at minimum citation of software in publications should include software name, primary authors\slash contributors, DOI or other unique identifier, and location where software can be found (DOI or URL).
+The metadata needed for software to be cited includes software name, DOI, authors\slash contributors (with names and ORCIDs), software dependencies (in the form of DOIs), and any other people\slash artifacts that would be cited or acknowledged in a paper.
+This information should be provided in a CITATION file, potentially in JSON or XML formats (rather than plaintext) to allow automatic processing\slash parsing.
+
+However, additional research and development efforts are needed to solve the remaining challenges.
+These questions include: how can we cite closed-source\slash commercial software?
+Can the above information be provided, even if the the software itself is not available or preserved?
+In order for software citations to carry weight akin to publications for academic credit and reputation, they require indexing to create a similar citation network (e.g., Web of Science, Scopus, Google Scholar).
+How can publications indicate direct use of software for research in citations, where results would not be possible without efforts of software authors?
+Should this citation be ``weighed'' higher than others?
+The \citeN{AAS:2016} suggests a new ``Software'' section below the acknowledgements; other approaches include transitive credit~\cite{Katz:2015aa}.
+
+Finally, open questions remain on whether citable software should go through peer code review and, if so, how can this be implemented?
+Alternatively, should citable software follow the arXiv model, with software ``advertising'' papers going through peer review in a relevant community?
+
 
 % Acknowledgments
 %\begin{acks}

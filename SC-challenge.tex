@@ -57,7 +57,7 @@
 \begin{document}
 
 % Page heads
-\markboth{K. Niemeyer et al.}{title TBD}
+\markboth{K. Niemeyer et al.}{The challenge and promise of software citation for credit, identification, discovery, and reuse}
 
 % Title portion
 \title{The challenge and promise of software citation for credit, identification, discovery, and reuse}
@@ -161,13 +161,14 @@ Computation Institute, University of Chicago \& Argonne National Laboratory.
 
 Modern science and engineering depend on software. 
 To acknowledge traditional research results published in archival journals and conferences, we use citation, but no such accepted standard exists to credit the considerable efforts that go into software.
-One method to increase the amount of software developed and shared is to
-treat a software release as a publication.  And since research results now depend on the specific software used (e.g., version), proper citation---and the associated preservation---is necessary to ensure reproducibility.
-\textbf{The main challenge of software citation is is that we need a way to uniquely identify released (published) software so that it can be cited by others who use it.}  We also need a process to curate and review software.  
+One method to increase the amount of software developed and shared is to treat a software release as a publication. 
+In addition, since research results now depend on the specific software used (e.g., version), proper citation---and the associated preservation---is necessary to ensure reproducibility.
+\textbf{The main challenge of software citation is that we need a way to uniquely identify released (published) software so that it can be cited by others who use it.}
+We also need a process to curate and review software.  
 
 Different communities currently follow widely varying practices for citing software, with guidelines ranging from suggesting citations of associated software or the software directly via DOI~\cite{AAS:2016} to no policy at all, with many ad hoc practices in between~\cite{Howison2015}.
-And some research communities have not yet adopted open-source mentalities regarding research software.
-Questions also remain about the role of curating\slash reviewing software---if software will be cited in the same manner as a publication, is quality assessment needed  (e.g., should it go through peer code review?)
+Furthermore, some research communities have not yet adopted open-source mentalities regarding research software.
+Questions also remain about the role of curating\slash reviewing software---if software will be cited in the same manner as a publication, is quality assessment needed (e.g., should it go through peer code review?)
 If so, how, when, and by whom?
 
 As a first step towards sustainable, reusable, and attributable software, efforts are underway to establish citation practices for software used in research.
@@ -201,7 +202,7 @@ Key challenges are the need to:
 \end{itemize}
 Although individual citation formats will vary based on the particular style of journals, conferences, or professional societies, citation of software in publications must minimally include software name, primary authors\slash contributors, DOI or other unique identifier, and location where the software has been published\slash archived (DOI or URL). 
 The metadata needed for software to be cited includes software name, DOI, authors\slash contributors (with names and ORCIDs), software dependencies (in the form of DOIs), and any other people\slash artifacts that would be cited or acknowledged in a paper. \note{not sure about the previous two sentences?  explain more?  combine?}
-This information should be provided in a CITATION file, potentially in JSON or XML formats (rather than plaintext) to allow automatic processing\slash parsing. \note{add DOAP?}
+This information should be provided in a CITATION file, potentially in JSON, XML, or DOAP (RDF\slash XML) formats---rather than or to supplement plaintext---to allow automatic processing\slash parsing.
 
 However, additional research and development efforts are needed to solve the remaining challenges.
 These questions include: how can we cite closed-source\slash commercial software?
@@ -212,7 +213,7 @@ Should this citation be ``weighed'' higher than others?
 The \citeN{AAS:2016} suggests a new ``Software'' section below the acknowledgements; other approaches include machine readable supplementary data~\cite{Katz:2015aa}.
 
 Finally, open questions remain on whether citable software should go through peer review and, if so, how can this be implemented?
-Alternatively, should citable software follow the arXiv model, with software ``advertising'' papers going through peer review in a relevant community? \note{this is the preprint model, but there is also the software paper model, which seems distinct}
+Instead, should citable software follow the arXiv preprint model where releases are made available for users and the community to judge, or alternatively the software paper model where ``advertising'' papers undergo peer review in a relevant community?
 
 
 % Acknowledgments

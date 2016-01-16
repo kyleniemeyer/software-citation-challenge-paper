@@ -191,21 +191,21 @@ The related PaperBadger project~\cite{PaperBadger} offers digital contributor ba
 \section{Challenges and Research Directions}
 %%%%%%%%%%%%%%%%%%%%%%%%%
 
-Key challenges include the need to:
+Key challenges and research directions include the need to:
 \begin{itemize}
-\item increase cultural acceptance of the concept of software as a digital product,
-\item standardize proper formats for citing software in publications,
 \item identify necessary metadata associated with software for citation, 
+\item standardize proper formats for citing software in publications,
 \item establish mechanisms for software to cite other software (i.e., dependencies),
-\item develop infrastructure to support indexing of software citations along with (or complementary to) the existing publication citation ecosystem, and
-\item determine standard practices for peer review of software.
+\item develop infrastructure to support indexing of software citations along with (or complementary to) the existing publication citation ecosystem,
+\item determine standard practices for peer review of software, and
+\item increase cultural acceptance of the concept of software as a digital product.
 \end{itemize}
-\note{May need transition from the list to these suggestions - maybe something that says `research directions'?}
-Citation of software in publications should minimally include software name, primary authors\slash contributors, DOI or other unique identifier, and location where the software has been published\slash archived (DOI or URL); however, individual citation formats will vary based on the particular style of journals, conferences, or professional societies. 
-Metadata needed for software to be cited includes similar information, in addition to authors and software dependencies via digital identifiers (e.g., ORCID, DOI). \note{what should be discussed first: metadata or citation?}
-This information should be provided in a CITATION file, potentially in JSON, XML, or DOAP (RDF\slash XML) formats---to replace or to supplement plaintext---to allow automatic processing\slash parsing.
 
-However, additional research and development efforts are needed to solve the remaining challenges.
+For software to be cited, we recommend that metadata include software name, primary authors\slash contributors (name and ORCID), DOI or other unique identifier, location where the software has been published\slash archived (DOI or URL), and software dependencies (via DOI).
+This information should be provided in a CITATION file, potentially in JSON, XML, or DOAP (RDF\slash XML) formats---to replace or to supplement plaintext---to allow automatic processing\slash parsing.
+Then, citation of software in publications should minimally include software name, primary authors, and DOI or location where the software has been published\slash archived; however, individual citation formats will vary based on the particular style of journals, conferences, or professional societies. 
+
+However, research and development efforts are needed to solve the remaining challenges.
 These questions include: how can we cite closed-source\slash commercial software---can the above information be provided, even if the the software itself is not preserved?
 In order for software citations to carry weight akin to publications for academic credit and reputation, they require indexing to create a similar citation network (e.g., Web of Science, Scopus, Google Scholar).
 How can publications indicate direct use of software for research in citations, where results would not be possible without efforts of software authors?

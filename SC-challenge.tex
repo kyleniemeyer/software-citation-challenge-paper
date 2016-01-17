@@ -188,8 +188,6 @@ Key challenges and research directions include the need to:
 \item identify necessary metadata associated with software for citation,
 \item standardize proper formats for citing software in publications,
 \item establish mechanisms for software to cite other software (i.e., dependencies),
-% I feel like we should point out that this problem has been solved by multiple communities already (Node.js/NPM, Ruby/Gemfile)
-% Also, perhaps we should cite existing efforts around automating this including https://libraries.io & http://depsy.org?
 \item develop infrastructure to support indexing of software citations along with (or complementary to) the existing publication citation ecosystem,
 \item determine standard practices for peer review of software, and
 \item increase cultural acceptance of the concept of software as a digital product.
@@ -198,6 +196,7 @@ Key challenges and research directions include the need to:
 For software to be cited, we recommend that metadata include software name, primary authors\slash contributors (name and ORCID), DOI or other unique identifier, location where the software has been published\slash archived (DOI\slash URL), and software dependencies (via DOI).
 This information should be provided in a CITATION file, potentially in JSON or XML (and with an appropriate metadata schema, e.g., DOAP) format---to replace or supplement plaintext---to allow automatic processing\slash parsing.
 Citations of software in publications should minimally include software name, primary authors, and DOI or location where the software has been published\slash archived; however, individual citation formats will vary based on the particular style of journals, conferences, or professional societies.
+Existing services such as Libraries.io~\cite{Libraries.io} and Depsy~\cite{Depsy} automate software dependency tracking; these could be harnessed to produce citation networks.
 Technical solutions to these challenges exist; community acceptance is instead needed.
 
 However, research and development efforts are needed to solve the remaining challenges.

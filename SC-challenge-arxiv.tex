@@ -1,0 +1,143 @@
+\documentclass[letterpaper,10pt]{article}
+\pdfoutput=1
+
+\usepackage[margin=1in]{geometry}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\usepackage{color}
+\usepackage{graphicx}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[american]{babel}
+\usepackage{textcomp}
+\usepackage{csquotes}
+
+\usepackage{authblk}
+
+\usepackage[square,authoryear,sort]{natbib}
+\usepackage[breaklinks=true,pdfborder={0 0 0},colorlinks=true]{hyperref}
+\usepackage[all]{hypcap}
+\usepackage{url}
+\urlstyle{tt}
+\usepackage{xcolor}
+\hypersetup{
+    colorlinks,
+    linkcolor={red!50!black},
+    citecolor={blue!50!black},
+    urlcolor={blue!80!black}
+}
+
+\definecolor{blueish}{rgb}{0.2,0.2,0.8}
+\newcommand{\note}[1]{ {\textcolor{blueish}    { ***Note:      #1 }}}
+
+% Title portion
+\title{The challenge and promise of software citation for credit, identification, discovery, and reuse}
+
+\author{
+Kyle E.\ Niemeyer\\
+School of Mechanical, Industrial, and Manufacturing Engineering,\\
+Oregon State University\\
+\href{mailto:kyle.niemeyer@oregonstate.edu}{kyle.niemeyer@oregonstate.edu}
+\and
+Daniel S. Katz\\
+Computation Institute, University of Chicago \&\\
+Argonne National Laboratory\\
+\href{mailto:d.katz@ieee.org}{d.katz@ieee.org}
+\and
+Arfon M. Smith\\
+GitHub Inc.\\
+\href{mailto:arfon@github.com}{arfon@github.com}
+}
+
+%\keywords{Software citation, Software credit, attribution}
+
+\date{}
+
+
+% Document starts
+\begin{document}
+
+\maketitle
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Introduction}
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Modern science and engineering depend on software.
+We use citation to acknowledge traditional research results published in archival journals and conferences, but no such accepted standard exists to credit the considerable efforts that go into software.
+One method to increase the amount of software developed, shared, and credited is to treat a software release as a publication. 
+In addition, since research results, including data, now depend on the specific software used (e.g., version), proper citation---and the associated preservation---is necessary to ensure reproducibility.
+\textbf{The main challenge of software citation is that we need a way to uniquely identify released\slash published software so that it can be cited by others who use it.}
+We also need a process to curate and review software.
+
+Different communities follow widely varying practices for citing software, with guidelines ranging from citations of an associated paper or the software itself via DOI~\citep{AAS:2016} to no policy at all, with many ad hoc practices in between~\citep{Howison2015}.
+%Furthermore, some research communities have not yet adopted open-source mentalities regarding research software.
+Questions also remain about the role of curating\slash reviewing software---if software will be cited in the same manner as a publication, is quality assessment needed (e.g., peer code review)?
+If so, how, when, and by whom?
+
+As a first step towards sustainable, reusable, and attributable software, efforts are underway to establish citation practices for software used in research.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Related Work}
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Multiple organizations, including the WSSSPE Software Credit~\citep{WSSSPE1,WSSSPE2,WSSSPE3} and FORCE11 Software Citation Working Groups, are working to standardize software citation practices.
+Some of the observations and recommendations made here come from their efforts, which follow similar work by DataCite and the FORCE11~\citet{DataCitation2014} to standardize research data citation practices.
+Currently, services including Zenodo or fig\textbf{share} allow software developers to obtain DOIs for software; the former has a streamlined process~\citep{GitHubZenodo} to register DOIs for GitHub software releases.
+The CodeMeta project~\citep{CodeMeta} is formalizing minimal metadata schemas in JSON and XML to connect existing software repositories, archives, and libraries (e.g., GitHub, fig\textbf{share}, Zenodo).
+
+Complementary efforts to provide credit for software development in research also depend on standardized citation practices.
+These include the transitive credit via JSON-LD scheme~\citep{Katz:2015aa} that assigns varying credit weights to contriponents---both contributors and research artifacts, including software and data---depending on their level of importance to the work.
+The Project CRediT (contributor role taxonomy) scheme~\citep{project_credit} includes a ``software'' category for authors of a publication with roles dedicated to software development, maintenance, and\slash or testing.
+The related PaperBadger project~\citep{PaperBadger} offers digital contributor badges associated with each role, connecting publications with people via DOI and ORCID, respectively.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Challenges and Research Directions}
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Key challenges and research directions include the need to:
+\begin{itemize}
+\item identify necessary metadata associated with software for citation,
+\item standardize proper formats for citing software in publications,
+\item establish mechanisms for software to cite other software (i.e., dependencies),
+\item develop infrastructure to support indexing of software citations along with (or complementary to) the existing publication citation ecosystem,
+\item determine standard practices for peer review of software, and
+\item increase cultural acceptance of the concept of software as a digital product.
+\end{itemize}
+
+For software to be cited, we recommend that metadata include software name, primary authors\slash contributors (name and ORCID), DOI or other unique identifier, location where the software has been published\slash archived (DOI\slash URL), and software dependencies (via DOI).
+This information should be provided in a CITATION file, potentially in JSON or XML format (and with an appropriate metadata schema, e.g., DOAP) to replace or supplement plaintext and allow automatic processing.
+Citations of software in publications should minimally include software name, primary authors, and DOI or location where the software was published\slash archived; however, individual citation formats will vary based on the particular style of journals, conferences, or professional societies.
+Existing services such as Libraries.io~\citep{Libraries.io} and Depsy~\citep{Depsy} automate software dependency tracking; these could be harnessed to produce citation networks.
+Technical solutions to these challenges exist; community acceptance is instead needed.
+
+However, research and development efforts are needed to solve the remaining challenges.
+These questions include: how can we cite closed-source\slash commercial software---can the above information be provided, even if the the software itself is not publicly preserved?
+How will index services (e.g., Web of Science, Scopus, Google Scholar) fully index software, since software citations require indexing to create a citation network akin to publications to carry weight for academic credit and reputation?
+How can publications indicate direct use of software for research in citations, where results would not be possible without efforts of software authors---should such a citation be ``weighted'' higher than others?
+The \citet{AAS:2016} suggests a new ``Software'' section below the acknowledgements; other approaches include machine-readable supplementary data~\citep{Katz:2015aa}.
+
+Finally, open questions remain on whether citable software should go through peer review and, if so, how can this be implemented?
+Should citable software itself follow the arXiv preprint model where releases are made available for users and the community to judge, or alternatively, the software paper model where ``advertising'' papers undergo peer review in a relevant community?
+
+
+% Acknowledgments
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Acknowledgments} \label{sec:acks}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Some work by K.\ E.\ Niemeyer was supported by NSF grant ACI-1535065.
+Work by D.\ S.\ Katz was supported by the National Science Foundation (NSF) while working at the Foundation; any opinion, finding, and conclusions or recommendations expressed in this material are those of the author and do not necessarily reflect the views of the NSF.
+
+
+% Bibliography
+\bibliographystyle{ACM-Reference-Format-Journals}
+\bibliography{acmsmall-refs}
+                             % Sample .bib file with references that match those in
+                             % the 'Specifications Document (V1.5)' as well containing
+                             % 'legacy' bibs and bibs with 'alternate codings'.
+                             % Gerry Murray - March 2012
+
+\end{document}

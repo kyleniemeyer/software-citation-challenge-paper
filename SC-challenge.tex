@@ -23,6 +23,7 @@
 \usepackage{url}
 
 \usepackage{color}
+\usepackage{xcolor}
 
 \definecolor{blueish}{rgb}{0.2,0.2,0.8}
 \newcommand{\katznote}[1]{ {\textcolor{blueish} { ***DSK: #1 }}} % Dan
@@ -156,10 +157,13 @@ emails: \href{mailto:kyle.niemeyer@oregonstate.edu}{kyle.niemeyer@oregonstate.ed
 
 Modern science and engineering depend on software.
 We use citation to acknowledge traditional research results published in archival journals and conferences, but no such accepted standard exists to credit the considerable efforts that go into software.
-One method to increase the amount of software developed, shared, and credited is to treat a software release as a publication. 
+One method to increase the amount of software developed, shared, and credited is to treat a software release as a publication.\knnote{Dan: can you support this statement with a citation?} 
 In addition, since research results, including data, now depend on the specific software used (e.g., version), proper citation---and the associated preservation---is necessary to ensure reproducibility.
 \textbf{The main challenge of software citation is that we need a way to uniquely identify released\slash published software so that it can be cited by others who use it.}
 We also need a process to curate and review software.
+
+\knnote{introduce connection to data quality\slash information quality here}
+Data provenance requires, among other things, record of software used to generate or process that data~\cite{Wilson:2014aa}.
 
 Different communities follow widely varying practices for citing software, with guidelines ranging from citations of an associated paper or the software itself via DOI~\cite{AAS:2016} to no policy at all, with many ad hoc practices in between~\cite{Howison2015}.
 %Furthermore, some research communities have not yet adopted open-source mentalities regarding research software.
@@ -177,10 +181,14 @@ Some of the observations and recommendations made here come from their efforts, 
 Currently, services including Zenodo or fig\textbf{share} allow software developers to obtain DOIs for software; the former has a streamlined process~\cite{GitHubZenodo} to register DOIs for GitHub software releases.
 The CodeMeta project~\cite{CodeMeta} is formalizing minimal metadata schemas in JSON and XML to connect existing software repositories, archives, and libraries (e.g., GitHub, fig\textbf{share}, Zenodo).
 
+\knnote{mention workshops on software citation; University of Manchester (? can't actually find that one). Additional references are good.}
+
 Complementary efforts to provide credit for software development in research also depend on standardized citation practices.
 These include the transitive credit via JSON-LD scheme~\cite{Katz:2015aa} that assigns varying credit weights to contriponents---both contributors and research artifacts, including software and data---depending on their level of importance to the work.
 The Project CRediT (contributor role taxonomy) scheme~\cite{project_credit} includes a ``software'' category for authors of a publication with roles dedicated to software development, maintenance, and\slash or testing.
 The related PaperBadger project~\cite{PaperBadger} offers digital contributor badges associated with each role, connecting publications with people via DOI and ORCID, respectively.
+
+\knnote{be more specific about related work targeting challenges}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Challenges and Research Directions}
@@ -196,11 +204,17 @@ Key challenges and research directions include the need to:
 \item increase cultural acceptance of the concept of software as a digital product.
 \end{itemize}
 
+\knnote{suggest ``few possible answers or clear path that might be followed''}
+
 For software to be cited, we recommend that metadata include software name, primary authors\slash contributors (name and ORCID), DOI or other unique identifier, location where the software has been published\slash archived (DOI\slash URL), and software dependencies (via DOI).
 This information should be provided in a CITATION file, potentially in JSON or XML format (and with an appropriate metadata schema, e.g., DOAP) to replace or supplement plaintext and allow automatic processing.
 Citations of software in publications should minimally include software name, primary authors, and DOI or location where the software was published\slash archived; however, individual citation formats will vary based on the particular style of journals, conferences, or professional societies.
 Existing services such as Libraries.io~\cite{Libraries.io} and Depsy~\cite{Depsy} automate software dependency tracking; these could be harnessed to produce citation networks.
 Technical solutions to these challenges exist; community acceptance is instead needed.
+
+\knnote{add discussion of when software should be cited; mention F11 principles}
+Question of when software should be cited; although no clear answer, in order to ensure reproducibility of research results, software should be cited if used directly and important to the results.
+In other words, if using different software could produce different data or results, then the software used should be cited.
 
 However, research and development efforts are needed to solve the remaining challenges.
 These questions include: how can we cite closed-source\slash commercial software---can the above information be provided, even if the the software itself is not publicly preserved?

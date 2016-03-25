@@ -73,7 +73,7 @@
 ARFON M. SMITH
 \affil{GitHub, Inc.}
 DANIEL S. KATZ
-\affil{University of Chicago \& Argonne National Laboratory}}
+\affil{University of Illinois}}
 % NOTE! Affiliations placed here should be for the institution where the
 %       BULK of the research was done. If the author has gone to a new
 %       institution, before publication, the (above) affiliation should NOT be changed.
@@ -142,13 +142,13 @@ DANIEL S. KATZ
 
 \begin{bottomstuff}
 Work by K.\ E.\ Niemeyer was supported in part by the National Science Foundation (NSF) under grant ACI-1535065.
-Work by D.\ S.\ Katz was supported by the NSF while working at the Foundation; any opinion, finding, and conclusions or recommendations expressed in this material are those of the author and do not necessarily reflect the views of the NSF.
+Work by D.\ S.\ Katz was supported by the NSF while working at the Foundation; any opinion, finding, and conclusions or recommendations expressed in this material are those of the author and do not necessarily reflect the views of the NSF. Some work by Katz was also done at the Computation Institute, University of Chicago \& Argonne National Laboratory.
 
 Author's addresses: K.\ E.\ Niemeyer, School of Mechanical, Industrial, and Manufacturing Engineering, Oregon State University;
 A.\ M.\ Smith,
 GitHub, Inc.;
 D.\ S.\ Katz,
-Computation Institute, University of Chicago \& Argonne National Laboratory;
+University of Illinois;
 emails: \href{mailto:kyle.niemeyer@oregonstate.edu}{kyle.niemeyer@oregonstate.edu}, \href{mailto:arfon@github.com}{arfon@github.com}, \href{mailto:d.katz@ieee.org}{d.katz@ieee.org}
 \end{bottomstuff}
 
@@ -158,10 +158,13 @@ emails: \href{mailto:kyle.niemeyer@oregonstate.edu}{kyle.niemeyer@oregonstate.ed
 \section{Introduction}
 %%%%%%%%%%%%%%%%%%%%%%%%%
 
-Modern science and engineering depend on software.
+Modern science and engineering depend on software, and much of it is not cited~\cite{Pan2015}.
 In fact, a 2009 survey of scientists found that 91\% consider software important or very important to their research~\cite{Hannay:2009wp}.
 The scientific community uses citation to acknowledge traditional research results published in archival journals and conferences, but no such accepted standard exists to credit the considerable efforts that go into software.
-One method to increase the amount of software developed, shared, and credited is to treat a software release as a publication.\knnote{Dan: can you support this statement with a citation?} 
+
+One method to increase the amount of software developed, shared, and credited is to treat a software release as a publication.
+There is good evidence that academics respond to incentives, including interview and survey data saying that increased citation would drive increased software development and sharing~\cite{howison-herbsleb2011,huang2013}. Further, there is evidence that activity increases when outputs can be formally counted~\cite{mcnaught2015}. Finally, there is evidence from data publishing that direct citations to datasets have been successful, rather than relying on indirect citations through publications~\cite{belter2014}.
+
 In addition, since research results, including data, now depend on the specific software used (e.g., version), proper citation---and the associated preservation---is necessary to ensure reproducibility~\cite{Sufi:2014en}.
 \textbf{The main challenge of software citation is that we need a way to uniquely identify released\slash published software so that it can be cited by others who use it.}
 We also need a process to curate and review software.
@@ -224,13 +227,13 @@ Identify necessary metadata associated with software for citation & The CodeMeta
 
 Standardize proper formats for citing software in publications & The FORCE11 Software Citation Working Group is currently working to define and gain community acceptance for software citation principles, after which (starting in April 2016) a follow-on group to implement the software citation principles will likely start, and part of the charge for this group will be to work with publishers on this challenge \\
 
-Establish mechanisms for software to cite other software (i.e., dependencies) & \\
+Establish mechanisms for software to cite other software (i.e., dependencies) & Software publication as software papers will allow this.  For software that is directly published, this is an open challenge with no clear path forward \\
 
 Develop infrastructure to support indexing of software citations along with (or complementary to) the existing publication citation ecosystem & The FORCE11 software citation implementation working group will also work on this, in collaboration with publishers and indexers \\
 
 Determine standard practices for peer review of software & Professional societies and science communities need to determine how this will happen \\
 
-Increase cultural acceptance of the concept of software as a digital product & \\ 
+Increase cultural acceptance of the concept of software as a digital product & Will happen over time; unclear how to accelarate \\ 
 \bottomrule
 \end{tabular}}
 \end{table}
@@ -281,9 +284,10 @@ Finally, open questions remain on whether citable software should go through pee
 Should citable software itself follow the arXiv preprint model where releases are made available for users and the community to judge, or alternatively, the software paper model where ``advertising'' papers undergo peer review in a relevant community?
 
 
-% Acknowledgments
-%\begin{acks}
-%\end{acks}
+ Acknowledgments
+\begin{acks}
+The authors wish to thank the members of the SciSIP community and mailing list, in particular Chris Belter, James Howison, and Joshua Rosenbloom, for a useful discussion on incentives for software publications and how their impact has and could further be measured.
+\end{acks}
 
 % Bibliography
 \bibliographystyle{ACM-Reference-Format-Journals}

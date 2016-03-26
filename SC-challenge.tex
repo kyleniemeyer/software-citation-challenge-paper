@@ -213,7 +213,7 @@ The related PaperBadger project~\cite{PaperBadger} offers digital contributor ba
 \section{Challenges and Research Directions}
 %%%%%%%%%%%%%%%%%%%%%%%%%
 
-Key challenges and research directions (with possible solutions/methods) are shown in Table~\ref{tab:challenges}.
+Key challenges and research directions (with possible solutions\slash methods) are shown in Table~\ref{tab:challenges}.
 
 \rowcolors{2}{}{lightgray}
 \begin{table}[htbp]%
@@ -223,22 +223,26 @@ Key challenges and research directions (with possible solutions/methods) are sho
 \textbf{Key research Challenge} & \textbf{Possible solutions/methods} \\
 \midrule
 
-Identify necessary metadata associated with software for citation & The CodeMeta project~\cite{CodeMeta} is working to do this now \\
+Identify necessary metadata associated with software for citation & 
+We suggest metadata below, and the CodeMeta project~\cite{CodeMeta} is working to determine minimal metadata \\
 
-Standardize proper formats for citing software in publications & The FORCE11 Software Citation Working Group is currently working to define and gain community acceptance for software citation principles, after which (starting in April 2016) a follow-on group to implement the software citation principles will likely start, and part of the charge for this group will be to work with publishers on this challenge \\
+Standardize proper formats for citing software in publications & 
+The FORCE11 Software Citation Working Group is currently working to define and gain community acceptance for software citation principles, after which (starting in April 2016) a follow-on group will initiate implementation activities. Part of the charge for this group will be to work with publishers on this challenge \\
 
-Establish mechanisms for software to cite other software (i.e., dependencies) & Software publication as software papers will allow this.  For software that is directly published, this is an open challenge with no clear path forward \\
+Establish mechanisms for software to cite other software (i.e., dependencies) & 
+Software publication as software papers allows this. For software that is directly published, this is an open challenge with no obvious path forward \\
 
-Develop infrastructure to support indexing of software citations along with (or complementary to) the existing publication citation ecosystem & The FORCE11 software citation implementation working group will also work on this, in collaboration with publishers and indexers \\
+Develop infrastructure to support indexing of software citations along with (or complementary to) the existing publication citation ecosystem & 
+The FORCE11 software citation implementation working group will also work on this, in collaboration with publishers and indexers \\
 
-Determine standard practices for peer review of software & Professional societies and science communities need to determine how this will happen \\
+Determine standard practices for peer review of software & 
+Professional societies and science communities need to determine how this will happen \\
 
-Increase cultural acceptance of the concept of software as a digital product & Will happen over time; unclear how to accelarate \\ 
+Increase cultural acceptance of the concept of software as a digital product & 
+Acceptance will happen over time; unclear how to accelerate \\ 
 \bottomrule
 \end{tabular}}
 \end{table}
-
-\knnote{suggest ``few possible answers or clear path that might be followed''}
 
 For software to be cited, we recommend that metadata include software name, primary authors\slash contributors (name and ORCID), DOI or other unique identifier, location where the software has been published\slash archived (DOI\slash URL), and software dependencies (via DOI).
 This information should be provided in a CITATION file, potentially in JSON or XML format (and with an appropriate metadata schema, e.g., DOAP) to replace or supplement plaintext and allow automatic processing.

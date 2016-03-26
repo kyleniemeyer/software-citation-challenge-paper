@@ -158,27 +158,26 @@ emails: \href{mailto:kyle.niemeyer@oregonstate.edu}{kyle.niemeyer@oregonstate.ed
 \section{Introduction}
 %%%%%%%%%%%%%%%%%%%%%%%%%
 
-Modern science and engineering depend on software, and much of it is not cited~\cite{Pan2015}.
-In fact, a 2009 survey of scientists found that 91\% consider software important or very important to their research~\cite{Hannay:2009wp}.
-The scientific community uses citation to acknowledge traditional research results published in archival journals and conferences, but no such accepted standard exists to credit the considerable efforts that go into software.
+Modern science and engineering depend on software.
+A 2009 survey of scientists found that 91\% consider software important or very important to their research~\cite{Hannay:2009wp}.
+The scientific community uses citation to acknowledge traditional research results published in archival journals and conferences, but no such accepted standard exists to credit the considerable efforts that go into software---and most research software is not cited~\cite{Pan2015}.
 
 One method to increase the amount of software developed, shared, and credited is to treat a software release as a publication.
-There is good evidence that academics respond to incentives, including interview and survey data saying that increased citation would drive increased software development and sharing~\cite{howison-herbsleb2011,huang2013}. Further, there is evidence that activity increases when outputs can be formally counted~\cite{mcnaught2015}. Finally, there is evidence from data publishing that direct citations to datasets have been successful, rather than relying on indirect citations through publications~\cite{belter2014}.
+There is good evidence that academics respond to incentives, including interview and survey data saying that increased citation would drive increased software development and sharing~\cite{howison-herbsleb2011,huang2013}. 
+Furthermore, evidence indicates that research activity increases when outputs can be formally counted~\cite{mcnaught2015}. 
+Finally, the evidence of success in direct citations to datasets~\cite{belter2014}---as opposed to indirect citations through publications---suggests similar positive benefits of software citation.
 
-In addition, since research results, including data, now depend on the specific software used (e.g., version), proper citation---and the associated preservation---is necessary to ensure reproducibility~\cite{Sufi:2014en}.
-\textbf{The main challenge of software citation is that we need a way to uniquely identify released\slash published software so that it can be cited by others who use it.}
-We also need a process to curate and review software.
-
-\knnote{introduce connection to data quality\slash information quality here}
-Provenance of research results and data require, among other things, a record of the software used to generate or process that data~\cite{Sandve:2013gh,Wilson:2014aa}.
-errors in software or variations due to environment~\cite{Morin:2012hz,Soergel:2015aa}
-
+In addition to the above benefits, since research results depend on the specific software used (e.g., version), proper citation---and the associated preservation---is necessary to ensure reproducibility~\cite{Sufi:2014en}.
+Provenance of research results and data requires, among other things, a record of the software used to generate or process that data~\cite{Sandve:2013gh,Wilson:2014aa}.
+Potential errors in software or variations due to environment~\cite{Morin:2012hz,Soergel:2015aa} further warrant the citation of specific software used.
 
 Different communities follow widely varying practices for citing software, with guidelines ranging from citations of an associated paper or the software itself via DOI~\cite{AAS:2016} to no policy at all, with many ad hoc practices in between~\cite{Howison2015}.
-%Furthermore, some research communities have not yet adopted open-source mentalities regarding research software.
+Furthermore, some research communities have not yet adopted open-source mentalities regarding research software.
 Questions also remain about the role of curating\slash reviewing software---if software will be cited in the same manner as a publication, is quality assessment needed (e.g., peer code review)?
 If so, how, when, and by whom?
 
+\textbf{The main challenge of software citation is that we need a way to uniquely identify released\slash published software so that it can be cited by others who use it.}
+We also need a process to curate and review software.
 As a first step towards sustainable, reusable, and attributable software, efforts are underway to establish citation practices for software used in research.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%
@@ -250,13 +249,12 @@ Citations of software in publications should minimally include software name, pr
 Existing services such as Libraries.io~\cite{Libraries.io} and Depsy~\cite{Depsy} automate software dependency tracking; these could be harnessed to produce citation networks.
 Technical solutions to these challenges exist; community acceptance is instead needed.
 
-\knnote{add discussion of when software should be cited; mention F11 principles}
-Question of when software should be cited; although no clear answer, in order to ensure reproducibility of research results, software should be cited if used directly and important to the results.
+In arguing the need for software citation, we simultaneously introduce the question of \textbf{when} software should be cited.
+Although there is no clear answer to this question, we argue that ensuring reproducibility of research results requires citation of software if used directly and important to research results.
 In other words, if using different software could produce different data or results, then the software used should be cited.
 
-\katznote{done below - feel free to edit} The authors of this paper are currently leading
-a working group under FORCE11 to develop principles for software citation~\cite{SCWG}.  The draft principles document~\cite{SoftwareCitation2016}, which is adapted from an earlier set of principles for data citation~\cite{DataCitation2014}, discusses
-how the decision on what software to cite should be made.  It currently states:
+The authors of this paper are currently leading a working group under FORCE11 to develop principles for software citation~\cite{SCWG}.
+The draft principles document~\cite{SoftwareCitation2016}, which is adapted from an earlier set of principles for data citation~\cite{DataCitation2014}, discusses how to decide what software to cite:
 
 \begin{quote}
 What software should be cited is the decision of the author(s) of the research work, in the context of community norms and practices, and in most scientific communities, these are currently in flux.
@@ -275,7 +273,7 @@ These statements may also be true for software products.
 In general, we intend the software citation principles to cover the minimum of what is necessary for software citation for the purpose of software identification.
 Other use cases (e.g., provenance, reproducibility) may lead to additional requirements (i.e., enhanced metadata).
 \end{quote}
-
+\knnote{I worry that including this whole note is too much, especially if we plan to publish the principles}
 
 
 However, research and development efforts are needed to solve the remaining challenges.

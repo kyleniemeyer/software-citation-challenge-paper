@@ -189,17 +189,11 @@ Some of the observations and recommendations made here come from their efforts, 
 Currently, services including Zenodo and fig\textbf{share} allow software developers to obtain DOIs for software; the former has a streamlined process~\citeyear{GitHubZenodo} to register DOIs for GitHub software releases.
 The CodeMeta project~\cite{CodeMeta} is formalizing minimal metadata schemas in JSON and XML to connect existing software repositories, archives, and libraries (e.g., GitHub, fig\textbf{share}, Zenodo).
 
-\knnote{mention workshops on software citation; University of Manchester (? can't actually find that one). Additional references are good.}
+While not a strictly machine-readable solution, Wilson in a blog post on the Software Sustainability Institute (SSI) website suggests that software authors include a \texttt{CITATION} file that documents exactly how the authors of the software would like to be cited by others~\cite{ssi-citation-files}.
 
-\katznote{Some ideas: \\
-\url{https://softwaredatacitation.org/} \\
-\url{http://www.software.ac.uk/software-credit}  \\
-\url{http://astronomy-software-index.github.io/2015-workshop/} \\
-\url{https://geodynamics.org/cig/projects/saga/} \\
-maybe \url{http://software.ac.uk/maintainable-software-practice-workshop}}
+Perhaps in recognition of the general desire to improve rates software citation, a number of workshops specifically aimed at addressing issues around software citation have been hosted (and sponsored) by funders and agencies in both the US (NFS, NIH and private foundations) and the UK (STFC, JISC, Wellcome Trust) (~\cite{swdatacite}, ~\cite{ssisoftwarecredit}, ~\cite{aas-software-index}, ~\cite{saga}, ).
+
 \knnote{Workshop reports} \cite{Sufi:2014en,Ahalt:2015ve}; Software Publishing Special Interest Group~\cite{Allen:2015ub}
-
-\katznote{Arfon, are there more that showed up in related work in the software citation activity?}
 
 Complementary efforts to provide credit for software development in research also depend on standardized citation practices.
 These include the transitive credit via JSON-LD scheme~\cite{Katz:2015aa} that assigns varying credit weights to contriponents---both contributors and research artifacts, including software and data---depending on their level of importance to the work.
@@ -207,6 +201,8 @@ The Project CRediT (contributor role taxonomy) scheme~\cite{project_credit} incl
 The related PaperBadger project~\cite{PaperBadger} offers digital contributor badges associated with each role, connecting publications with people via DOI and ORCID, respectively.
 
 \knnote{be more specific about related work targeting challenges}
+
+\asnote{For key challenge `Determine standard practices for peer review of software':  we could cite the rOpenSci review process here: http://ropensci.org/blog/2016/03/28/software-review?}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Challenges and Research Directions}

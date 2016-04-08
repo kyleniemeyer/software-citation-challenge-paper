@@ -211,7 +211,7 @@ The rOpenSci community represents one exception to this, with a documented revie
 \section{Challenges and Research Directions}
 %%%%%%%%%%%%%%%%%%%%%%%%%
 
-Key challenges and research directions (with possible solutions\slash methods) are summarized in Table~\ref{tab:challenges}.
+Table~\ref{tab:challenges} summarizes key challenges and research directions for software citation, along with possible solutions\slash methods.
 
 \rowcolors{2}{}{lightgray}
 \begin{table}[htbp]%
@@ -243,18 +243,16 @@ Acceptance will happen over time; unclear how to accelerate this process \\
 \end{table}
 
 For software to be cited, we recommend that metadata include software name, primary authors\slash contributors (name and ORCID), DOI or other unique identifier, location where the software has been published\slash archived (DOI\slash URL), and software dependencies (via DOI).
-This information should be provided in a CITATION file, potentially in JSON or XML format (and with an appropriate metadata schema, e.g., DOAP) to replace or supplement plaintext and allow automatic processing.
+This information should be provided in a \texttt{CITATION} file, potentially in JSON or XML format (and with an appropriate metadata schema, e.g., DOAP) to supplement or replace plaintext and allow automatic processing.
 Citations of software in publications should minimally include software name, primary authors, and DOI or location where the software was published\slash archived; however, individual citation formats will vary based on the particular style of journals, conferences, or professional societies.
 Existing services such as Libraries.io~\cite{Libraries.io} and Depsy~\cite{Depsy} automate software dependency tracking; these could be harnessed to produce citation networks.
-Technical solutions to these challenges exist; community acceptance is instead needed.
+Technical solutions to these challenges exist---community acceptance is instead needed.
 
 In arguing the need for software citation, we simultaneously introduce the question of \textbf{when} software should be cited.
 Although there is no clear answer to this question, we argue that ensuring reproducibility of research results requires citation of software if used directly and important to research results.
 In other words, if using different software could produce different data or results, then the software used should be cited.
-
-The authors of this paper are currently leading the FORCE11 Software Citation Working Group to develop principles for software citation~\citeyear{SCWG}.
+We are currently leading the FORCE11 Software Citation Working Group to develop principles for software citation~\citeyear{SCWG}.
 The draft principles document~\cite{SoftwareCitation2016}, which is adapted from an earlier set of principles for data citation~\cite{DataCitation2014}, discusses how to decide what software to cite:
-
 \begin{quote}
 What software should be cited is the decision of the author(s) of the research work in the context of community norms and practices, and in most research communities, these are currently in flux.
 In general, we believe that software should be cited on the same basis as any other research product such as a paper or book; that is, authors should cite the appropriate set of software products just as they cite the appropriate set of papers.
@@ -275,13 +273,13 @@ In other words, if using different software could produce different data or resu
 \end{quote}
 
 However, research and development efforts are needed to solve the remaining challenges.
-These questions include: how can we cite closed-source\slash commercial software---can the above information be provided, even if the the software itself is not publicly preserved?
-How will index services (e.g., Web of Science, Scopus, Google Scholar) fully index software, since software citations require indexing to create a citation network akin to publications to carry weight for academic credit and reputation?
+These questions include: how can we cite closed-source\slash commercial software---can the above information be provided, even if the software itself is not publicly preserved?
+Software citations require indexing to create a citation network akin to publications to carry weight for academic credit and reputation, so how will index services (e.g., Web of Science, Scopus, Google Scholar) fully index software?
 How can publications indicate direct use of software for research in citations, where results would not be possible without efforts of software authors---should such a citation be ``weighted'' higher than others?
 The \citeN{AAS:2016} suggests a new ``Software'' section below the acknowledgements; other approaches include machine-readable supplementary data~\cite{Katz:2015aa}.
 
 Finally, open questions remain on whether citable software should go through peer review and, if so, how can this be implemented?
-Should citable software itself follow the arXiv preprint model where releases are made available for users and the community to judge, or alternatively, the software paper model where ``advertising'' papers undergo peer review in a relevant community?
+Should citable software itself follow the arXiv preprint model where releases are made available for users and the community to judge, or, alternatively, the software paper model where ``advertising'' papers undergo peer review in a relevant community?
 
 
 \begin{acks}

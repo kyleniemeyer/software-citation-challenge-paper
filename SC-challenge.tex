@@ -244,7 +244,8 @@ Acceptance will happen over time; unclear how to accelerate this process \\
 \end{tabular}}
 \end{table}
 
-For software to be cited, we recommend that metadata include software name, primary authors\slash contributors (name and ORCID), DOI or other unique identifier, location where the software has been published\slash archived (DOI\slash URL), and software dependencies (via DOI). \katznote{Do we need the location?  and the dependencies?  Two sentences later we say we don't}
+For software to be cited, we recommend that metadata include software name, primary authors\slash contributors (name and ORCID), DOI or other unique and persistent identifier, and location where the software has been published\slash archived.
+Typically, DOI (or a similar unique identifier) will provide both identification and location, but if not then metadata should include a way to locate the software (e.g., URL).
 This information should be provided in a \texttt{CITATION} file, potentially in JSON or XML format (and with an appropriate metadata schema, e.g., DOAP) to allow automatic processing.
 Citations of software in publications should minimally include software name, primary authors, and DOI or location where the software was published\slash archived; however, individual citation formats will vary based on the particular style of journals, conferences, or professional societies.
 Existing services such as Libraries.io~\cite{Libraries.io} and Depsy~\cite{Depsy} automate software dependency tracking; these could be harnessed to produce citation networks.

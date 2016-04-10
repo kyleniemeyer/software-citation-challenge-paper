@@ -1,0 +1,99 @@
+\documentclass{article}
+\usepackage[left=1in,right=1in,top=1in,bottom=1in]{geometry}                % See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                   % ... or a4paper or a5paper or ... 
+%\geometry{landscape}                % Activate for for rotated page geometry
+%\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx, caption}
+\usepackage{latexsym,url,amscd, amssymb, amsmath}
+\usepackage{epstopdf}
+
+\usepackage{multicol}
+\usepackage{booktabs}
+\usepackage{fancyvrb}
+\usepackage{url,breakurl}
+
+\usepackage[english]{babel}
+\usepackage{textcomp}
+
+%to highlight text
+\usepackage[usenames, dvipsnames]{color}
+\providecommand{\hly}[1]{\colorbox{yellow}{#1}}
+%\providecommand{\hlt}[1]{\colorbox{Turquoise}{#1}}
+%\providecommand{\hlg}[1]{\colorbox{green}{#1}}
+\providecommand{\hlr}[1]{\colorbox{SkyBlue}{#1}}
+
+\usepackage[sort&compress]{natbib}
+\bibpunct{[}{]}{,}{n}{}{;}
+\usepackage[linkcolor=blue, citecolor=blue, colorlinks=true, breaklinks=true]{hyperref}
+
+\usepackage{setspace}
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+
+
+%\date{}                                           % Activate to display a given date or no date
+
+\providecommand{\e}[1]{\ensuremath{\times 10^{#1}}}
+
+\setlength{\parindent}{0in}
+\setlength{\parskip}{0.4cm}
+
+%%% BEGIN DOCUMENT
+\begin{document}
+
+We thank both reviewers for their detailed comments, and have addressed their requests and suggestions here.
+We performed a significant revision of our manuscript.
+%Specific changes in the marked revision in response to Reviewers \#1 and \#3 are respectively highlighted in \hly{yellow} and \hlr{blue}.
+%Reviewer \#2's comments were favorable, and no action was required.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection*{Reviewer \#1:}
+
+\textbf{Reviewer comment:}
+\emph{This is an interesting topic and authors highlight important concerns about software citation and summarize the scope of the problem providing, however, few possible answers or a clear path that might be followed.}
+
+\textbf{Our response:}
+We added a table that summarizes the key challenges and possible solutions to \textbf{page 3}.
+
+
+\textbf{Reviewer comment:}
+\emph{Also, the discussion can go deeper other than ways to cite software. In cases where software is not the focus of the research should it even be cited? For instance, in a data analysis scenario, does it makes sense to cite a particular implementation of an algorithm? Should Pearson be cited in the references section when a correlation analysis is performed?}
+
+\textbf{Our response:}
+We agree that this is an important point, and have added discussion of when software should be cited to \textbf{page 4}.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Reviewer \#2:}
+
+\textbf{Reviewer comment:}
+\emph{One method to increase\ldots who suggests this? (yourself, or should there be a reference here).}
+
+\textbf{Our response:}
+We have added greater discussion and references for this statement to \textbf{page 1}.
+
+\textbf{Reviewer comment:}
+\emph{Software citation is indeed as important as article or data citation. The connection with DQ\slash IQ seems a bit tenuous, however. I am sure the connection can be made, for instance the ability to do all the things promised in the title relies upon good quality and complete metadata.}
+
+\emph{However I was rather hoping the authors would elaborate on this connection?}
+
+\textbf{Our response:}
+We have added discussion and references on the impact of software citation to DQ\slash IQ through reproducibility and provenance of research results on \textbf{pages 1--2}.
+
+
+\textbf{Reviewer comment:}
+\emph{I am aware of at least one recent workshop on software citation (organised at the University of Manchester in the UK), so the topic is clearly on the table. On this note, I would suggest the authors may want to frame the related work discussion in the context of the challenges, as it seems to be work (for the most part, it's not research) aimed at meeting some of those challenges.}
+
+\textbf{Our response:}
+We added discussion and references to multiple recent workshops on software citation to \textbf{page 2}.
+In addition, the entire discussion of related work on \textbf{pages 2--3} parallels the key research challenges summarized in Table 1 on \textbf{page 3}.
+
+
+\textbf{Reviewer comment:}
+\emph{There are 5 bibliography entries in the references (i.e., proper publications), and 4 are self-citations. I find this rather unbalanced.}
+
+\textbf{Our response:}
+Through the course of extending discussion and adding content in response to other comments, the bibliography has grown significantly.
+Out of the 36 total entries, 18 are to ``proper'' publications (i.e., journal articles, conference proceedings, or published technical reports), and one or more of us contributed to only four of those.
+
+
+\end{document}
